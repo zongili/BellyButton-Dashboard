@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <!-- 
+  the header links to the Bootstrap CDN. 
+-->
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+/>
+  <link rel="stylesheet" href="static/css/style.css">
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <!-- use jumbotron deliverable 4 -->
+      <div class="col-md-12 jumbotron">
+        <!-- use of custom font, font color, background color change, deliverable 4 -->
+        <div class="left"> 
+          <!-- deliverable 4 add more info on the parahraph about the project -->
+        <h1>Belly Button Biodiversity Dashboard</h1></div>
+        <p>This engaging and dynamic dashboard gives information and
+          shows the best way of conveying data to volunteers and other researchers. 
+          For volunteers who are interested in selling their bacteria to Improbable Beef, 
+          what is the best way to visualize the types of bacteria that colonize their bellies? 
+          Some of them will be suitable for synthetic beef production, while others will not.</p>
+        <b>Use the interactive charts below to explore the dataset</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well"> 
+          <div class="left">
+          <h4>Test Subject ID No.:</h4>
+          <!-- <select id="selDataset"></select> -->
+          <!-- The <select> tag indicates a dropdown menu. Its id is selDataset.
+The <select> tag now has an additional attribute, called onchange, which is associated with the optionChanged()function.
+When a change takes place in the dropdown menu, the optionChanged() function is called.
+The argument for theoptionChanged() function is this.value.
+Here, this refers to the dropdown menu. this.value therefore returns to the value attribute of the current dropdown menu selection. -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div></div>
+      </div> 
+      <div class="row">
+<!-- deliverable 4 - change the layout of the page -->
+      <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Demographic Info</h3>
+        </div>
+        <div id="sample-metadata" class="panel-body"></div>
+      </div></div>
+      <div class="col-md-8">
+        <div id="bubble"></div>
+        <p><i>Displays the sample information when an individual’s ID is selected from the dropdown menu</i></p>
+      </div>
+    </div>
+      <div class="col-md-6">
+        <div id="bar"></div>
+        <!-- deliverable 4 add paragraph to each chart -->
+        <p><i>Displays the top 10 bacterial species (OTUs) when an individual’s ID is 
+          selected from the dropdown menu</i></p>
+      </div>
+      <div class="col-md-6">
+        <div id="gauge"></div>
+        <p><i>Displays the weekly washing frequency's value when an individual ID is selected from the dropdown menu</i></p>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <!-- define plotly here -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./js/charts.js"></script>
+
+</body>
+
+</html>

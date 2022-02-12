@@ -1,0 +1,23 @@
+/* deliverable 4 - use of jumbotron for background image */
+.jumbotron {
+    background-image: url("C:/Users/hulya/Documents/ClassFolder/BellyButton-Dashboard/images/6-kapak.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+  }
+  body{ /* Add background color deliverable 4 */
+    background: rgb(201, 206, 214);
+    color:rgb(28, 48, 78) 
+}
+/* deliverable 4 , use of custom fonts and font colors - google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC');
+.left {
+  width:800px;
+  margin:auto;
+  text-align:center;
+  box-sizing:border-box;
+  background-color:#FFEBCD;
+  border:2px solid black;
+  font-family: 'Alegreya SC', serif;
+  font-size: 22px;
+}
+ 
